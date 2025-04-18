@@ -24,17 +24,19 @@ public class Weapon : MonoBehaviour, IWeapon
 
     public void Shoot()
     {
+        Debug.Log("S’està executant Shoot()");
         if (Time.time < nextTimeToFire || currentAmmo <= 0) return;
 
         nextTimeToFire = Time.time + fireRate;
         currentAmmo--;
 
         muzzleFlash?.Play();
-        shootAudio?.Play();
-
+        //shootAudio?.Play();
+        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * range, Color.red, 1.5f);
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, range))
         {
             Debug.Log($"Impacte a: {hit.collider.name}");
+            
 
             if (impactEffect != null)
                 Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
