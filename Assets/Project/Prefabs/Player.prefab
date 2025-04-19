@@ -82,8 +82,9 @@ MonoBehaviour:
   fireRate: 0.2
   playerCamera: {fileID: 4755205556195691560}
   muzzleFlash: {fileID: 8151807855166895451}
-  impactEffect: {fileID: 0}
+  impactEffect: {fileID: 4235851487319761936, guid: 5bb4607626ad896468194d8d5fdeef36, type: 3}
   shootAudio: {fileID: 0}
+  ammoUI: {fileID: 6959963414044947974}
 --- !u!1 &4873320044041798585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,6 +4918,51 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &6271880624662622194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2179241183367918744}
+  - component: {fileID: 6959963414044947974}
+  m_Layer: 0
+  m_Name: UIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2179241183367918744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271880624662622194}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1614153533990644060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6959963414044947974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271880624662622194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99da345646c2c041a7775c882ac03cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoText: {fileID: 0}
 --- !u!1 &7444862041473107177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +4998,7 @@ Transform:
   m_Children:
   - {fileID: 8733347751716693126}
   - {fileID: 3340660822465469155}
+  - {fileID: 2179241183367918744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3061632845149433715
